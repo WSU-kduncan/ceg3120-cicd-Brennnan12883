@@ -8,9 +8,9 @@ Written By: Brennan Burke
     - Once installed, open Docker Desktop, sign in, then go to settings. Go to the resources tab, then the WSL integration tab. Make sure "Enable integration with my default WSL distro" is checked. (You can also Enable             integration with a distro that you use, such as Ubuntu)
     - Make sure WSL2 is installed on your system. This can be done by doing ` wsl -l -v ` then following up with `wsl --install` if it is not installed.
     - Make sure Docker is installed correctly by using the command `docker --version` then doing a test command such as `docker run hello-world`.
-2. Manually Setting up a Container
+2. Setting up a container
 
-3. `Dockerfile` & Building Images
+3. Utilizing Dockerfile and Images
 
-5. Working with your DockerHub Repository
+5. Using the DockerHub Repository
 
