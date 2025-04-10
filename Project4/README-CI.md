@@ -43,8 +43,8 @@ Written By: Brennan Burke
    - How to authenticate login to Dockerhub:
         - Enter the command `docker login` and it should redirect you to Dockerhub, I actually had an error and had to manually copy and paste the given code into Dockerhub after pasting the link.
    - How to push your image onto Dockerhub:
-        - Run `docker tag <container_id> <yourusername>/<YOURLASTNAME>-CEG3120:latest` to tag the image.
+        - Run `docker tag node:18-bullseye <yourusername>/<YOURLASTNAME>-CEG3120:latest` to tag the image.
         - Then run `docker push <yourusername>/<YOURLASTNAME>-CEG3120:latest`to push the image.
    - Link to my Dockerhub Repository:
-        - 
+        - https://hub.docker.com/repository/docker/edgyduck/burke-ceg3120/general
 
