@@ -9,8 +9,29 @@ Written By: Brennan Burke
     - Make sure WSL2 is installed on your system. This can be done by doing ` wsl -l -v ` then following up with `wsl --install` if it is not installed.
     - Make sure Docker is installed correctly by using the command `docker --version` then doing a test command such as `docker run hello-world`.
 2. Setting up a container
+   - Run the docker container command, it should look something like this `docker run -it --rm -p 4200:4200 -v $(pwd)/angular-site/wsu-hw-ng-main:/usr/src/app -w /usr/src/app node:18-bullseye bash` The pathway might differ slightly but it should look roughly the same.
+       - Using the tag `-it` makes the terminal interactable after running.
+       - `--rm` will make the container remove itself after exiting.
+       - `-p 4200:4200` maps port 4200 on the container to port 4200 on the local host.
+       - `-v $(pwd)/angular-site/wsu-hw-ng-main:/usr/src/app` will mount the container from the host device to the container.
+       - `-w /usr/src/app` will place the angular-site directory inside of the `/usr/src/app` directory.
+       - `bash` will run the bash shell inside of the container.
+    - Command used for dependencies installed inside of the container:
+          - `npm install -g @angular/cli`
+    - Command used to run the application inside of the container:
+          - `ng serve --host 0.0.0.0`
+    - Validating the container is properly hosting:
+          - From the container side, run `docker logs <container_id>` for example my container id was b03eb93e3d0c, so I would run `docker logs b03eb93e3d0c`
+          - From the local host side, go to your browser and open the link `http://localhost:4200`, if "Birds gone wild" appears, then it has properly connected.
 
 3. Utilizing Dockerfile and Images
-
+   - Dockerfile explanation:
+         - FROM node:18-bullseye: Uses the Node.js base image.
+         - WORKDIR /usr/src/app: Sets the working directory of angular-site inside the container to /user/src/app.
+         - COPY . .: Copies the Angular app into the container.
+         - RUN npm install -g @angular/cli: Installs all required dependencies needed for Angular.
+         - CMD ["npm", "run", "start"] Runs the Angular app when the container starts.
+   - 
+     
 5. Using the DockerHub Repository
 
