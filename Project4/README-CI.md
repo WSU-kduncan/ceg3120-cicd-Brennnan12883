@@ -57,4 +57,14 @@ Written By: Brennan Burke
 2. Github Actions
    - My workflow builds and pushes a Docker image to DockerHub whenever a commit is pushed to the main branch of the repository.
    - Workflow explanation:
-     - 
+     - First, the name of the image will be set to edgyduck Docker Image.
+     - Then, a piece of code gets triggered any time something is committed and pushed to the main branch.
+     - After, a job called `Build and Push` will be defined that runs on Ubuntu.
+     - Next, the repository code is downloaded onto the Image runner so that the code can be used.
+     - Afterwards, the secrets folder will be utilized with DOCKER_USERNAME and DOCKER_TOKEN, letting you login to Docker.
+     - Finally, the Image is built using the root folder and is then pushed to DockerHub.
+
+3.  Verifying that these steps worked
+    - You can test the workflow by making a commit to your main branch, then checking the Actions tab in the repository, if the action appeared then it works.
+    - You can test your Docker Image by pulling your image locally `docker pull <username>/<image>:latest` then running it `docker run --rm <username>/<image>:latest`
+      
