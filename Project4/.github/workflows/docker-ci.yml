@@ -24,4 +24,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: edgyduck/my-image:latest
+          tags: edgyduck/burke-ceg3120:latest
