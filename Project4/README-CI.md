@@ -48,4 +48,13 @@ Written By: Brennan Burke
    - Link to my Dockerhub Repository:
         - https://hub.docker.com/repository/docker/edgyduck/burke-ceg3120/general
 ## Part 2
-1. 
+1. How to configure the GitHub repository secrets
+   - First, log in to Docker on your browser.
+   - Click on your profile icon, then go to Account settings, which should take you to the Account Information tab.
+   - Next, click on Personal Access Tokens, then click generate new token. You will then need to give it a proper name and scope. Set the scope to Read & Write.
+   - Make sure to keep note of the password for the token, keep it safe as you cannot see this again once you move on.
+  
+2. Github Actions
+   - My workflow builds and pushes a Docker image to DockerHub whenever a commit is pushed to the main branch of the repository.
+   - Workflow explanation:
+     - 
