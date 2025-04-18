@@ -1,5 +1,16 @@
 # Project 4
 Written By: Brennan Burke
+
+Goal: The goal of this project is to properly create a docker image as well as use the dockerhub repository and github repository in tandem. 
+
+Tools Used: 
+    - Docker Desktop
+    - Github
+    - Ubuntu 
+    - DockerHub
+    - angular-site Resources
+
+Diagram: 
 ## Part 1
 1. Setting up Docker
     - Visit the Docker website and click "Download Docker Desktop". https://www.docker.com/get-started/
@@ -68,3 +79,5 @@ Written By: Brennan Burke
     - You can test the workflow by making a commit to your main branch, then checking the Actions tab in the repository, if the action appeared then it works.
     - You can test your Docker Image by pulling your image locally `docker pull <username>/<image>:latest` then running it `docker run --rm <username>/<image>:latest`
       
+## Resources
+1. 
