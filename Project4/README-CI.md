@@ -3,12 +3,12 @@ Written By: Brennan Burke
 
 Goal: The goal of this project is to properly create a docker image as well as use the dockerhub repository and github repository in tandem. 
 
-Tools Used: 
-    - Docker Desktop
-    - Github
-    - Ubuntu 
-    - DockerHub
-    - angular-site Resources
+Tools Used:
+        - Docker Desktop
+        - Github
+        - Ubuntu 
+        - DockerHub
+        - angular-site Resources
 
 Diagram: 
 ## Part 1
