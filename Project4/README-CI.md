@@ -3,14 +3,17 @@ Written By: Brennan Burke
 
 Goal: The goal of this project is to properly create a docker image as well as use the dockerhub repository and github repository in tandem. 
 
-Tools Used:
-        - Docker Desktop
-        - Github
-        - Ubuntu 
-        - DockerHub
-        - angular-site Resources
+Tools Used in this Project:
+        - Docker Desktop: Allowed the usage of Docker commands in command line.
+        - Github: Area to store information and create a README file.
+        - Ubuntu: OS used to run the commands used for the project.
+        - DockerHub: Website used to adjust settings of Docker account.
+        - angular-site Resources: Template for the creation of the docker image.
+        - Lucid Charts: Creation of the Diagram provided.
 
 Diagram: 
+![Diagram](images/diagram4.png)
+
 ## Part 1
 1. Setting up Docker
     - Visit the Docker website and click "Download Docker Desktop". https://www.docker.com/get-started/
