@@ -83,4 +83,4 @@ Diagram:
     - You can test your Docker Image by pulling your image locally `docker pull <username>/<image>:latest` then running it `docker run --rm <username>/<image>:latest`
       
 ## Resources
-1. 
+1. Used links provided in the Project4 README.md file.
