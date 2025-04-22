@@ -12,7 +12,7 @@ Tools Used in this Project:
         - Lucid Charts: Creation of the Diagram provided.
 
 Diagram: 
-![Diagram](Project4/images/diagram4.png)
+![Diagram](images/diagram4.png)
 
 ## Part 1
 1. Setting up Docker
