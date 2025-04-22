@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     tags:
-      - 'v*.*.*'  # Trigger only on version tags
+      - 'v*.*.*'
 
 jobs:
   build-and-push:
@@ -17,7 +17,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: wsukduncan/s25cats
+          images: 
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
