@@ -23,7 +23,8 @@ Written By: Brennan Burke
      - Also make sure to add your DOCKER_USERNAME and DOCKER_TOKEN to your GitHub secrets.
    - Link to workflow file: https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/.github/workflows/docker-build.yml
 3. Testing
-   - 
+   - Testing if your workflow workedflowed
+     - 
 
 ## Resources
 
