@@ -24,7 +24,8 @@ Written By: Brennan Burke
    - Link to workflow file: https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/.github/workflows/docker-build.yml
 3. Testing
    - Testing if your workflow workedflowed
-     - 
+     - Go to the actions tab of your repo in GitHub, click on your workflow file, and if there are no errors then it should have worked.
+     - For DockerHub, run `docker pull edgyduck/burke-ceg3120:1.3.1` then run the latest with `docker run --rm edgyduck/burke-ceg3120` and if an output is seen, it worked.
 
 ## Resources
 
