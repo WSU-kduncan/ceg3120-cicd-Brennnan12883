@@ -30,9 +30,30 @@ Written By: Brennan Burke
 ## Part 2
 
 1. EC2 Instance Details
-   - AMI used: 
+   - AMI used: Amazon Linux 2 AMI (HVM)
+   - Instance Type: t2.medium
+   - Key: P5-Key.pem
+   - Storage: 30 GiB of gp2
+   - Security Group:
+     - Allowed SSH from my home IP and Wright State IP.
+     - Allowed HTTP for all IPs.
+     - Allowed TCP for port 9000 to allow webhook payloads, started with allowing from all IPs to make sure it works.
+   - Security Group Justification:
+     - Set SSH to Home IP and Wright State IP for better security.
+     - Allowed HTTP access from all IPs to allow for usage of the angular app and to receive information from the internet.
+     - Allowed access to port 9000 from all IPs to let webhook payloads work, but will change the IP access to the Docker Local IP when set up.
+2. Setting up Docker inside of the EC2 Instance
+3. Testing the EC2 Instance
+4. Application Refresh Bash Script
+5. Webhook Listener Configuration
+6. Payload Sender Configuration
+7. Configuring a Webhook Service for the EC2 Instance
+
+## Part 3
+
+## Part 4
 
 ## Resources
 
 ChatGPT: Used ChatGPT with the prompt "Can you generate a github workflow that adheres to these guidelines: (Copy pasted the guidelines given)" and was given a proper workflow file template that I edited to fit my needs.
-https://github.com/adnanh/webhook
+https://github.com/adnanh/webhook 
