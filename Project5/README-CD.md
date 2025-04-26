@@ -43,14 +43,14 @@ Written By: Brennan Burke
      - Allowed HTTP access from all IPs to allow for usage of the angular app and to receive information from the internet.
      - Allowed access to port 9000 from all IPs to let webhook payloads work, but will change the IP access to the Docker Local IP when set up.
 2. Setting up Docker inside of the EC2 Instance
-   - To install Docker on your instance, assuming you have a fresh instance, run:
-```
+   - To install Docker on your instance, assuming you have a fresh instance, run: ```
 sudo apt update
 sudo apt install -y docker.io
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo usermod -aG docker $USER
 ```
+
 4. Testing the EC2 Instance
 5. Application Refresh Bash Script
 6. Webhook Listener Configuration
