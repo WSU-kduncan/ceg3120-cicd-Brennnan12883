@@ -54,8 +54,10 @@ sudo systemctl start docker
 sudo usermod -aG docker $USER
 ```
    - Test if Docker is working by running `docker --version` and/or `docker run hello-world`.
-   - Since I am running on Ubuntu, I did not run into any point where I needed another dependency.
-   - I ran the command `docker run -it --rm -p 80:80 -v $(pwd)/angular-site/wsu-hw-ng-main:/usr/src/app -w /usr/src/app node:18-bullseye bash` to run my image.
+   - Since I am running on Ubuntu, I needed to run:
+     - `sudo npm install` to install npm and its dependencies.
+     - `sudo npm install -g @angular/cli` to install angular and its dependencies.
+   - I ran the command `docker run -it --rm -p 4200:4200 edgyduck/burke-ceg3120:latest` to run my image.
 
 3. Testing the EC2 Instance
 4. Application Refresh Bash Script
