@@ -37,10 +37,12 @@ Written By: Brennan Burke
    - Security Group:
      - Allowed SSH from my home IP and Wright State IP.
      - Allowed HTTP for all IPs.
+     - Created a Custom TCP to allow access to port 4200 from both my home IP and Wright State IPs.
      - Allowed TCP for port 9000 to allow webhook payloads, started with allowing from all IPs to make sure it works.
    - Security Group Justification:
      - Set SSH to Home IP and Wright State IP for better security.
      - Allowed HTTP access from all IPs to allow for usage of the angular app and to receive information from the internet.
+     - Allowed TCP acces to port 4200 to allow Docker to run on port 4200 from both my home IP and Wright State's IPs.
      - Allowed access to port 9000 from all IPs to let webhook payloads work, but will change the IP access to the Docker Local IP when set up.
 2. Setting up Docker inside of the EC2 Instance
    - To install Docker on your instance, assuming you have a fresh instance, run:
