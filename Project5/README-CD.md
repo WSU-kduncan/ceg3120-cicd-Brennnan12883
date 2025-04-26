@@ -51,12 +51,14 @@ sudo systemctl enable docker
 sudo systemctl start docker
 sudo usermod -aG docker $USER
 ```
+   - Test if Docker is working by running `docker --version` and/or `docker run hello-world`.
+   - Since I am running on Ubuntu, I had to install (INSERT DEPENDENCIES ONCE FOUND!!!!!!!!)
 
-4. Testing the EC2 Instance
-5. Application Refresh Bash Script
-6. Webhook Listener Configuration
-7. Payload Sender Configuration
-8. Configuring a Webhook Service for the EC2 Instance
+3. Testing the EC2 Instance
+4. Application Refresh Bash Script
+5. Webhook Listener Configuration
+6. Payload Sender Configuration
+7. Configuring a Webhook Service for the EC2 Instance
 
 ## Part 3
 
