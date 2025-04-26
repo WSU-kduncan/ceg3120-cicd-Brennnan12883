@@ -30,10 +30,10 @@ Written By: Brennan Burke
 ## Part 2
 
 1. EC2 Instance Details
-   - AMI used: Amazon Linux 2 AMI (HVM)
+   - AMI used: Ubuntu Server 24.04 LTS
    - Instance Type: t2.medium
    - Key: P5-Key.pem
-   - Storage: 30 GiB of gp2
+   - Storage: 30 GiB of gp3
    - Security Group:
      - Allowed SSH from my home IP and Wright State IP.
      - Allowed HTTP for all IPs.
