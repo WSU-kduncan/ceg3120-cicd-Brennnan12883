@@ -26,7 +26,12 @@ Written By: Brennan Burke
    - Testing if your workflow workedflowed
      - Go to the actions tab of your repo in GitHub, click on your workflow file, and if there are no errors then it should have worked.
      - For DockerHub, run `docker pull edgyduck/burke-ceg3120:1.3.1` then run the latest with `docker run --rm edgyduck/burke-ceg3120` and if an output is seen, it worked.
+    
+## Part 2
+
+1. EC2 Instance Details
+   - AMI used: 
 
 ## Resources
 
-ChatGPT: Used ChatGPT with the prompt "Can you generate a github workflow that adheres to these guidelines: (Copy pasted the guidelines given)" and was given a proper workflow file template that I edited.
+ChatGPT: Used ChatGPT with the prompt "Can you generate a github workflow that adheres to these guidelines: (Copy pasted the guidelines given)" and was given a proper workflow file template that I edited to fit my needs.
