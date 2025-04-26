@@ -35,3 +35,4 @@ Written By: Brennan Burke
 ## Resources
 
 ChatGPT: Used ChatGPT with the prompt "Can you generate a github workflow that adheres to these guidelines: (Copy pasted the guidelines given)" and was given a proper workflow file template that I edited to fit my needs.
+https://github.com/adnanh/webhook
