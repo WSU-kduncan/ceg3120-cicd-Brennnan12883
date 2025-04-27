@@ -104,8 +104,19 @@ sudo usermod -aG docker $USER
    - Downloading Webhook
        - If Go is installed correctly, run `sudo apt-get install webhook`
        - Once this is finished, run `webhook --version` to test if it is properly installed.
+   - Summary of Webhook file:
+     - "id": The identifier for the webhook file, in this case it is "container-deployment"
+     - "execute-command": The command to run when the webhook is triggered, which then points to the bash deployment script (~/ceg3120-cicd-Brennnan12883/Project5/deployment/bash-deploy.sh).
+     - "command-working-directory": Working directory where the command should be executed.
+     - "response-message": The return message once the webhook is successfully triggered.
+     - "trigger-rule": Defines the conditions necessary to trigger a webhook, which is through "secrets" in this file.
    - Verifying Definition File is loaded:
      - Run the command `webhook -hooks ~/ceg3120-cicd-Brennnan12883/Project5/deployment/webhooks.json -verbose` and it will run with the verbose tag, then wait for payloads.
+   - Checking logs of the Webhook
+     - In order to monitor the logs of the webhook, and to check if a payload is being received, run `webhook -hooks ~/ceg3120-cicd-Brennnan12883/Project5/deployment/webhooks.json -verbose`
+     - To monitor the logs from a currently running webhook, run `sudo journalctl -u webhook --follow`
+     - What to look for in the docker process (`docker ps`)
+       - After running `docker logs <container_id>` you want to look for any logs referencing incoming requests, hook extractions, and errors. 
 6. Payload Sender Configuration
 7. Configuring a Webhook Service for the EC2 Instance
 
