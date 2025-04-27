@@ -128,7 +128,21 @@ sudo usermod -aG docker $USER
      - Under Payload URL, enter `http://18.234.194.225:9000/hooks/container-deployment`
      - Push and Pull events will both trigger the Payload.
    - To verify that a payload was successfully sent, there should be a green checkmark in webhook deliveries inside of GitHub. Also, the command `sudo journalctl -u webhook --follow` can be ran inside of the EC2 instance       to check the webhook logs.
-8. Configuring a Webhook Service for the EC2 Instance
+7. Configuring a Webhook Service for the EC2 Instance
+   - Summary of the service file contents:
+     - Description: Names the service and makes sure that it launches once the network comes online.
+     - ExecStart: Command that runs the webhook listener, points to the webhooks.json file.
+     - Restart: Automatically restarts the service if it fails.
+     - User: Sets the service to run as the ubuntu user.
+     - WorkingDirectory: Sets the default working directory where the service will run.
+   - Enabling and starting the service:
+     - Once the service file is created, run `sudo systemctl daemon-reload` to reload the system so that it will recognize the new service file.
+     - Run `sudo systemctl enable webhook` so that the service will start automatically once the instance is online.
+     - Run `sudo systemctl start webhook` to start the webhook now, without having to reboot the instance.
+   - Checking if the service is working:
+     - Run `sudo journalctl -u webhook --follow` to view the webhook service logs.
+   - Link to service file:
+     - [Service File](https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/deployment/webhook.service)
 
 ## Part 3
 
