@@ -1,0 +1,13 @@
+[Unit]
+Description=Webhook Listener
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/webhook -hooks ~/ceg3120-cicd-Brennnan12883/Project5/deployment/webhooks.json -verbose
+Restart=on-failure
+User=ubuntu
+Group=ubuntu
+
+[Install]
+WantedBy=multi-user.target
