@@ -116,7 +116,9 @@ sudo usermod -aG docker $USER
      - In order to monitor the logs of the webhook, and to check if a payload is being received, run `webhook -hooks ~/ceg3120-cicd-Brennnan12883/Project5/deployment/webhooks.json -verbose`
      - To monitor the logs from a currently running webhook, run `sudo journalctl -u webhook --follow`
      - What to look for in the docker process (`docker ps`)
-       - After running `docker logs <container_id>` you want to look for any logs referencing incoming requests, hook extractions, and errors. 
+       - After running `docker logs <container_id>` you want to look for any logs referencing incoming requests, hook extractions, and errors.
+   - Link to Definition File:
+       - [Definition File](https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/deployment/webhooks.json)
 6. Payload Sender Configuration
 7. Configuring a Webhook Service for the EC2 Instance
 
