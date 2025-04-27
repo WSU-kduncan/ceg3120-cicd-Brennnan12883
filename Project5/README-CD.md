@@ -81,10 +81,15 @@ sudo usermod -aG docker $USER
        ```
      - Start the container again `docker run -it --rm -p 4200:4200 edgyduck/burke-ceg3120:latest` (Or use the -d tag instead if no debugging necessary)
 4. Application Refresh Bash Script
-   - 
-6. Webhook Listener Configuration
-7. Payload Sender Configuration
-8. Configuring a Webhook Service for the EC2 Instance
+   - Testing the script:
+     - Be sure Docker is running on the instance
+     - Run the script (assuming you are in the Project5 folder)`./deployment/bash-deploy.sh`
+     - Make sure the previous container is stopped and removed by using `docker ps -a`
+     - Make sure the angular application is properly running by going to an internet browser and going to `http://52.91.191.210:4200`
+   - Link to deployment script: [Script Link](https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/deployment/bash-deploy.sh)
+5. Webhook Listener Configuration
+6. Payload Sender Configuration
+7. Configuring a Webhook Service for the EC2 Instance
 
 ## Part 3
 
