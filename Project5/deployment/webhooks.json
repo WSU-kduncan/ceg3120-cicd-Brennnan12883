@@ -1,0 +1,15 @@
+[
+  {
+    "id": "container-deployment",
+    "execute-command": "~/ceg3120-cicd-Brennnan12883/Project5/deployment/bash-deploy.sh",
+    "command-working-directory": "~/ceg3120-cicd-Brennnan12883/Project5",
+    "pass-arguments-to-command": [],
+    "secret": "webhook-secret-42",
+    "trigger-rule": {
+      "match": {
+        "type": "payload-hash-sha256",
+        "secret": "webhook-secret-42"
+      }
+    }
+  }
+]
