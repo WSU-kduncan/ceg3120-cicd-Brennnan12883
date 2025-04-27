@@ -25,7 +25,7 @@ Written By: Brennan Burke
 3. Testing
    - Testing if your workflow workedflowed
      - Go to the actions tab of your repo in GitHub, click on your workflow file, and if there are no errors then it should have worked.
-     - For DockerHub, run `docker pull edgyduck/burke-ceg3120:1.3.1` then run the latest with `docker run --rm edgyduck/burke-ceg3120` and if an output is seen, it worked.
+     - For DockerHub, run `docker pull edgyduck/burke-ceg3120:latest` then run the latest with `docker run --rm edgyduck/burke-ceg3120:latest` and if an output is seen, it worked.
     
 ## Part 2
 
@@ -60,10 +60,31 @@ sudo usermod -aG docker $USER
    - I ran the command `docker run -it --rm -p 4200:4200 edgyduck/burke-ceg3120:latest` to run my image.
 
 3. Testing the EC2 Instance
+   - In order to pull the latest version of the Docker Image, run `docker pull edgyduck/burke-ceg3120:latest`.
+   - In order to run the container from the image, run `docker run -it --rm -p 4200:4200 edgyduck/burke-ceg3120:latest`
+     - Running with the -it tag is best for testing the image, as it enables the interactive container.
+     - Running with a -d tag instead of -it is best for post-testing, as it runs in a detached state.
+   - Validating if the angular application is working:
+     - Validating from container side:
+       - Run `docker logs <container_id>`
+     - Validating from Host side:
+       - Run `curl http://localhost:4200` and if there is an HTML output, it should be working.
+     - Validating from External Connection:
+       - Open an internet browser and type `http://52.91.191.210:4200` in the search bar, if it loads then it works!
+   - Refreshing a new version of the Docker image:
+     - Run `docker pull edgyduck/burke-ceg3120:latest` to pull the latest version.
+     - Remove the current running container by running:
+       ```
+       docker ps
+       docker stop <container_id>
+       docker rm <container_id>
+       ```
+     - Start the container again `docker run -it --rm -p 4200:4200 edgyduck/burke-ceg3120:latest` (Or use the -d tag instead if no debugging necessary)
 4. Application Refresh Bash Script
-5. Webhook Listener Configuration
-6. Payload Sender Configuration
-7. Configuring a Webhook Service for the EC2 Instance
+   - 
+6. Webhook Listener Configuration
+7. Payload Sender Configuration
+8. Configuring a Webhook Service for the EC2 Instance
 
 ## Part 3
 
