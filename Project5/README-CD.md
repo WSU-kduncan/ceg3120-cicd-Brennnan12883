@@ -88,6 +88,24 @@ sudo usermod -aG docker $USER
      - Make sure the angular application is properly running by going to an internet browser and going to `http://52.91.191.210:4200`
    - Link to deployment script: [Script Link](https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/deployment/bash-deploy.sh)
 5. Webhook Listener Configuration
+   - Installing adnanh's webhook:
+     - First you must make sure to install Go.
+       - Run the command `wget https://go.dev/dl/go1.24.2.linux-amd64.tar.gz ` to download version 1.24.2 of Go
+       - Run the command `sudo tar -C /usr/local -xvzf go1.24.2.linux-amd64.tar.gz` to extract the contents of the install into `/usr/local`
+       - Then you must go to your .bashrc file and add the following line at the bottom of the file:
+         ```
+         export PATH=$PATH:/usr/local/go/bin
+         export GOPATH=$HOME/go
+         export GOROOT=/usr/local/go
+         ```
+       - Once this is complete, run `source .bashrc` to set the changes in place.
+       - Finally, run `go version` to see if Go successfully installed. If you see a version pop up, then it was a success.
+       - Make sure you are on a version 1.21 or higher in Go as stated in the installation directions in adnanh's webhook.
+   - Downloading Webhook
+       - If Go is installed correctly, run `sudo apt-get install webhook`
+       - Once this is finished, run `webhook --version` to test if it is properly installed.
+   - Verifying Definition File is loaded:
+     - Run the command `webhook -hooks ~/ceg3120-cicd-Brennnan12883/Project5/deployment/webhooks.json -verbose` and it will run with the verbose tag, then wait for payloads.
 6. Payload Sender Configuration
 7. Configuring a Webhook Service for the EC2 Instance
 
@@ -98,4 +116,5 @@ sudo usermod -aG docker $USER
 ## Resources
 
 ChatGPT: Used ChatGPT with the prompt "Can you generate a github workflow that adheres to these guidelines: (Copy pasted the guidelines given)" and was given a proper workflow file template that I edited to fit my needs.
+ChatGPT: Used the phrase, "I need to install Go to be able to install webhooks, how do I do this with version 1.24.2 of Go?"
 https://github.com/adnanh/webhook 
