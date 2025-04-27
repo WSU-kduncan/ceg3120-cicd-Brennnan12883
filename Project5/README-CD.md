@@ -1,6 +1,8 @@
 # Project 5
 Written By: Brennan Burke
 
+Disclaimer: My EC2 instance IP kept changing each time that it restarted, I found it fairly easy to just adjust to the new IP and unfortunately never made a static IP. This is why the IP changes in the commands listed in this project.
+
 ## Part 1
 
 1. Tagging in a GitHub repository
@@ -120,7 +122,13 @@ sudo usermod -aG docker $USER
    - Link to Definition File:
        - [Definition File](https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/deployment/webhooks.json)
 6. Payload Sender Configuration
-7. Configuring a Webhook Service for the EC2 Instance
+   - Selected GitHub as my payload sender, as I find it to be more accessible and I have more experience with GitHub. Also, it allows the payload to trigger from pushes and pulls.
+   - Enabling the GitHub selection:
+     - In the GitHub repository, go to Settings --> Webhooks then click add webhook.
+     - Under Payload URL, enter `http://18.234.194.225:9000/hooks/container-deployment`
+     - Push and Pull events will both trigger the Payload.
+   - To verify that a payload was successfully sent, there should be a green checkmark in webhook deliveries inside of GitHub. Also, the command `sudo journalctl -u webhook --follow` can be ran inside of the EC2 instance       to check the webhook logs.
+8. Configuring a Webhook Service for the EC2 Instance
 
 ## Part 3
 
