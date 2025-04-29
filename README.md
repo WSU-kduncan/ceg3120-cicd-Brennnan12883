@@ -1,5 +1,5 @@
 # Project Overview
-Written by: brennan Burke
+Written by: Brennan Burke
 ## Contents
 
 .github Directory:
