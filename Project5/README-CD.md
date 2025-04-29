@@ -11,10 +11,10 @@ The goal of this project is to implement a Continuous Deployment pipeline using 
 - AWS EC2: Provides a virtual server environment to host the application and the webhook listener.
 - GitHub: Used to trigger webhooks when a push or pull event occurs.
 
-### Diagram
+### What's not working in this project?
+- My EC2 instance IP kept changing each time that it restarted, I found it fairly easy to just adjust to the new IP and unfortunately never made a static IP. This is why the IP changes in the commands listed in this project.
 
-### Disclaimer 
-My EC2 instance IP kept changing each time that it restarted, I found it fairly easy to just adjust to the new IP and unfortunately never made a static IP. This is why the IP changes in the commands listed in this project.
+### Diagram
 
 ## Part 1
 
