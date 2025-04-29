@@ -36,7 +36,7 @@ The goal of this project is to implement a Continuous Deployment pipeline using 
    - Values that may need updated if changing repository:
      - Make sure to change the `images: edgyduck/burke-ceg3120` to your image. 
      - Also make sure to add your DOCKER_USERNAME and DOCKER_TOKEN to your GitHub secrets.
-   - Link to workflow file: https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/.github/workflows/docker-build.yml
+   - Link to workflow file: https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/.github/workflows/docker-build2.yml
 3. Testing
    - Testing if your workflow workedflowed
      - Go to the actions tab of your repo in GitHub, click on your workflow file, and if there are no errors then it should have worked.
