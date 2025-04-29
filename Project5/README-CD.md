@@ -15,6 +15,7 @@ The goal of this project is to implement a Continuous Deployment pipeline using 
 - My EC2 instance IP kept changing each time that it restarted, I found it fairly easy to just adjust to the new IP and unfortunately never made a static IP. This is why the IP changes in the commands listed in this project.
 
 ### Diagram
+[Diagram](images/vuNUAau.png)
 
 ## Part 1
 
