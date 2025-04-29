@@ -1,7 +1,20 @@
 # Project 5
 Written By: Brennan Burke
 
-Disclaimer: My EC2 instance IP kept changing each time that it restarted, I found it fairly easy to just adjust to the new IP and unfortunately never made a static IP. This is why the IP changes in the commands listed in this project.
+### What is the goal of this project?
+The goal of this project is to implement a Continuous Deployment pipeline using a webhook listener on an EC2 instance. When a new Docker image is pushed or new code is pushed/pulled, the webhook triggers a script to update the running container, ensuring that the application always runs the latest version without much downtime to update.
+
+### What tools are used in this project and what are their roles?
+- Docker: Containerizes the application for easy deployment and management.
+- DockerHub: Hosts the built Docker images, allowing the EC2 instance to pull the latest version.
+- Webhook (adnanh's webhook): Listens on a specified port for incoming HTTP requests and executes a script when triggered.
+- AWS EC2: Provides a virtual server environment to host the application and the webhook listener.
+- GitHub: Used to trigger webhooks when a push or pull event occurs.
+
+### Diagram
+
+### Disclaimer 
+My EC2 instance IP kept changing each time that it restarted, I found it fairly easy to just adjust to the new IP and unfortunately never made a static IP. This is why the IP changes in the commands listed in this project.
 
 ## Part 1
 
@@ -143,11 +156,6 @@ sudo usermod -aG docker $USER
      - Run `sudo journalctl -u webhook --follow` to view the webhook service logs.
    - Link to service file:
      - [Service File](https://github.com/WSU-kduncan/ceg3120-cicd-Brennnan12883/blob/main/Project5/deployment/webhook.service)
-
-## Part 3
-
-## Part 4
-
 ## Resources
 
 ChatGPT: Used ChatGPT with the prompt "Can you generate a github workflow that adheres to these guidelines: (Copy pasted the guidelines given)" and was given a proper workflow file template that I edited to fit my needs.
