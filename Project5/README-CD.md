@@ -1,5 +1,6 @@
 # Project 5
 Written By: Brennan Burke
+
 Edited for Demo from Instance 5/2/25 at 2:24PM
 ### What is the goal of this project?
 The goal of this project is to implement a Continuous Deployment pipeline using a webhook listener on an EC2 instance. When a new Docker image is pushed or new code is pushed/pulled, the webhook triggers a script to update the running container, ensuring that the application always runs the latest version without much downtime to update.
