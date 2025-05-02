@@ -160,6 +160,9 @@ sudo usermod -aG docker $USER
 ## Resources
 
 ChatGPT: Used ChatGPT with the prompt "Can you generate a github workflow that adheres to these guidelines: (Copy pasted the guidelines given)" and was given a proper workflow file template that I edited to fit my needs.
+
 ChatGPT: Used the phrase, "I need to install Go to be able to install webhooks, how do I do this with version 1.24.2 of Go?"
+
 [Adnanh's Webhook](https://github.com/adnanh/webhook) 
+
 [Lucid Charts](https://www.lucidchart.com/pages)
